@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="google-site-verification" content="zeF0W6OCIejQBjcR6Qs7SiS6_PvxL1hpspWO5NS2PAg" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scaffolding Consultant in London — Asle Scaffolding Consultancy</title>
+  <meta name="description" content="Professional scaffolding consultancy in London — safety, compliance, inspections, RAMS, project management and more." />
+  <style>
+    :root{
+      --brand:#4e6286;
+      --accent:#f4f6f9;
+      --muted:#6b7280;
+      --card-bg:#ffffff;
+      --shadow: 0 6px 18px rgba(46,61,86,0.08);
+      --radius:12px;
+      --max-width:1100px;
+      --gap:20px;
+    }
+
+    /* Basic reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      line-height:1.6;
+      color:#222;
+      background:linear-gradient(180deg,#f7f9fb, #ffffff);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding-bottom:80px;
+    }
+
+    /* Container */
+    .container{
+      max-width:var(--max-width);
+      margin:32px auto;
+      padding:0 20px;
+    }
+
+    /* Header */
+    header.site-header{
+      background:var(--brand);
+      color:#fff;
+      position:sticky;
+      top:0;
+      z-index:40;
+      box-shadow: 0 6px 20px rgba(78,98,134,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .header-inner{
+      max-width:var(--max-width);
+      margin:0 auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      padding:18px 20px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:inherit;
+    }
+    .brand .logo {
+      width:44px;height:44px;border-radius:10px;
+      background:linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.06));
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;
+      box-shadow: inset 0 -6px 18px rgba(0,0,0,0.04);
+    }
+    .brand h1{font-size:18px;line-height:1;color:white}
+    nav.site-nav{display:flex;gap:14px;align-items:center}
+    nav.site-nav a{
+      color:rgba(255,255,255,0.95);
+      text-decoration:none;
+      padding:6px 10px;border-radius:8px;font-weight:600;font-size:14px;
+    }
+    nav.site-nav a:hover{background:rgba(255,255,255,0.06)}
+    .cta{
+      background:white;color:var(--brand);padding:8px 14px;border-radius:10px;font-weight:700;text-decoration:none;border:0;
+      box-shadow:var(--shadow);
+    }
+
+    /* Hero */
+    .hero{
+      background: linear-gradient(180deg, rgba(78,98,134,0.06), rgba(78,98,134,0.02));
+      border-radius:14px;
+      padding:28px;
+      margin-top:22px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:20px;
+      align-items:flex-start;
+    }
+    .hero .left{flex:1}
+    .hero h2{color:#0b1220;font-size:28px;margin-bottom:8px}
+    .hero p{color:var(--muted);font-size:15px;margin-bottom:12px}
+    .hero .hero-links{display:flex;gap:10px;flex-wrap:wrap}
+
+    /* Grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 340px;
+      gap:var(--gap);
+      margin-top:24px;
+    }
+    @media (max-width:980px){
+      .grid{grid-template-columns:1fr; }
+    }
+
+    /* Card */
+    .card{
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .card h3{color:black;margin-bottom:10px}
+    .card p{color:var(--muted);font-size:15px}
+
+    /* Feature boxes / services */
+    .services{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      margin-top:12px;
+    }
+    @media (max-width:720px){ .services{grid-template-columns:1fr} }
+
+    .service{
+      border-radius:10px;padding:14px;background:#fbfdff;border:1px solid rgba(78,98,134,0.04);
+    }
+    .service h4{margin-bottom:6px;font-size:16px;color:#0a1220}
+    .service p{color:var(--muted);font-size:14px}
+
+    /* Bullet list style */
+    .list-clean{list-style:none;padding-left:0;margin:8px 0 0 0}
+    .list-clean li{padding:8px 0;border-bottom:1px dashed rgba(15,23,42,0.04);color:var(--muted);font-size:15px}
+
+    /* FAQ accordion */
+    .faq .q{
+      margin-bottom:10px;border-radius:10px;overflow:hidden;border:1px solid rgba(15,23,42,0.05);
+    }
+    .faq button{
+      width:100%;text-align:left;padding:12px 14px;background:transparent;border:0;font-weight:700;font-size:15px;
+      display:flex;justify-content:space-between;align-items:center;cursor:pointer;
+    }
+    .faq .answer{padding:12px 14px;border-top:1px solid rgba(15,23,42,0.03);color:var(--muted)}
+
+    /* Right column quick contact */
+    .contact{
+      display:flex;flex-direction:column;gap:10px;
+    }
+    .contact .contact-item{display:flex;gap:12px;align-items:flex-start;padding:12px;border-radius:10px;background:#fff}
+    .contact .contact-item strong{font-size:14px}
+    .contact .btn{display:inline-block;text-decoration:none;padding:10px 12px;border-radius:8px;background:var(--brand);color:#fff;font-weight:700;text-align:center}
+
+    /* Footer */
+    footer.site-footer{
+      margin-top:32px;padding:28px 20px;background:#0e1722;color:#e8eef6;border-top:6px solid var(--brand);
+    }
+    .footer-inner{
+      max-width:var(--max-width);margin:0 auto;display:flex;gap:20px;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;
+    }
+    .footer-brand h3{color:white;margin-bottom:6px}
+    .small{font-size:13px;color:#b9c6db}
+
+    /* utility */
+    .muted{color:var(--muted)}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:#eef3fb;font-weight:700;font-size:13px;color:var(--brand)}
+    a.anchor-link{color:var(--brand);text-decoration:none;font-weight:700}
+
+    /* nice code block like for URL */
+    .url-box{background:#f3f6fb;padding:10px;border-radius:8px;border:1px dashed rgba(78,98,134,0.06);font-family:monospace;color:#1f3b5b}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Asle Scaffolding Consultancy - Home">
+        <div class="logo">AS</div>
+        <div>
+          <h1>Scaffolding Consultant in London - Safe, Reliable, and Professional Services</h1>
+        </div>
+      </a>
+
+      <nav class="site-nav" role="navigation" aria-label="Main menu">
+        <a href="#intro" class="anchor-link">Intro</a>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main container -->
+  <main class="container" id="main">
+      <div class="left">
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Two column grid -->
+    <div class="grid" role="region" aria-label="Main content and sidebar">
+      <!-- Left content -->
+      <div>
+        <!-- First paragraph anchored -->
+        <article class="card" aria-labelledby="intro-heading">
+
+          <!-- FIRST PARAGRAPH: anchored with id="intro" as requested -->
+          <p id="intro" style="margin-top:10px;color:var(--muted);font-size:15px;line-height:1.7;">
+            When it comes to construction and building projects, scaffolding plays a very important role. It’s not just about putting up temporary platforms - it’s about safety, efficiency, and making sure everything is done the right way. That’s where a professional scaffolding consultant comes in. At Asle Scaffolding Consultancy, we provide expert scaffolding consultancy services in London and beyond, helping contractors, developers, and project managers keep their projects safe, compliant, and well-managed. <a href="https://aslescaffoldingconsultancy.com/">https://aslescaffoldingconsultancy.com/</a>
+          </p>
+
+          <div style="margin-top:12px" class="url-box" aria-hidden="true">
+            </div>
+          </div>
+
+          <p style="margin-top:14px;color:var(--muted);">
+            We understand that scaffolding is not just another box to tick - it’s a vital part of any project. If the scaffold is unsafe or not compliant, it can put workers at risk, delay work, and even lead to legal issues. Our consultancy is built on years of real hands-on scaffolding experience, combined with deep technical knowledge. This unique blend allows us to deliver services that are not only technically correct but also practical and easy to follow on site.
+          </p>
+        </article>
+
+        <!-- Why choose -->
+        <section id="why" class="card" style="margin-top:18px;">
+          <h3 style="color:black">Why Choose Our Scaffolding Consultancy in London?</h3>
+          <p class="muted">Choosing the right scaffolding consultant can make all the difference to your project. Here’s why many in London and across the UK trust us:</p>
+
+          <div class="services" style="margin-top:12px;">
+            <div class="service">
+              <h4>Tailored Service</h4>
+              <p>Every project is different - we evaluate your site, regulations and timelines before offering bespoke solutions.</p>
+            </div>
+            <div class="service">
+              <h4>Practical Experience</h4>
+              <p>Our team has worked across rail, civil, housing, aviation and commercial projects - advice that works on site.</p>
+            </div>
+            <div class="service">
+              <h4>Compliance & Standards</h4>
+              <p>We ensure scaffolds meet UK regulations, NASC guidance and British Standards for peace of mind.</p>
+            </div>
+            <div class="service">
+              <h4>Clear Communication</h4>
+              <p>Reports are straight-forward and readable - useful for both managers and operatives on site.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Services list -->
+        <section id="services" class="card" style="margin-top:18px;">
+          <h3 style="color:black">Our Scaffolding Consultancy Services</h3>
+          <p class="muted">Full-range support to manage scaffolding work safely from design to dismantle.</p>
+
+          <ol style="margin-top:12px;color:var(--muted);line-height:1.7">
+            <li><strong>Inspections and Surveys</strong> — Regular inspections and detailed surveys to maintain scaffold safety and structural integrity.</li>
+            <li style="margin-top:8px;"><strong>Health & Safety Support</strong> — RAMS, toolbox talks, site audits and point-of-work assessments to keep everyone safe.</li>
+            <li style="margin-top:8px;"><strong>Project Management</strong> — Site setup, PPE checks, qualification reviews and compliance management across project stages.</li>
+          </ol>
+        </section>
+
+        <!-- How we work / process -->
+        <section id="process" class="card" style="margin-top:18px;">
+          <h3 style="color:black">How We Work - Our Process</h3>
+          <p class="muted">A simple, practical process designed to deliver clarity and results without unnecessary complexity.</p>
+
+          <ul class="list-clean" style="margin-top:12px;">
+            <li><strong>Initial Consultation:</strong> Detailed discussion about project needs and support required.</li>
+            <li><strong>Service Agreement:</strong> Confirm which services are required and agree scope.</li>
+            <li><strong>Site Visit:</strong> Inspections, surveys or assessments carried out on site by experienced consultants.</li>
+            <li><strong>Formal Report:</strong> A clear professional report with findings, advice and practical recommendations.</li>
+            <li><strong>Ongoing Support:</strong> Follow-up visits and reviews where needed to keep works compliant and safe.</li>
+          </ul>
+        </section>
+
+        <!-- Why clients trust us -->
+        <section class="card" style="margin-top:18px;">
+          <h3 style="color:black">Why Clients Trust Us</h3>
+          <p class="muted">We value safety, professionalism and honesty. A reliable partner for projects large and small.</p>
+
+          <div style="margin-top:12px;display:grid;gap:10px;">
+            <div style="padding:12px;border-radius:10px;background:#fbfdff;border:1px solid rgba(78,98,134,0.04)">
+              <strong>Expertise</strong>
+              <div class="muted" style="margin-top:6px">CISRS-certified consultants with proven skills and knowledge.</div>
+            </div>
+            <div style="padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(15,23,42,0.03)">
+              <strong>Sector Experience</strong>
+              <div class="muted" style="margin-top:6px">Civil works, rail, aviation, industrial and residential projects.</div>
+            </div>
+            <div style="padding:12px;border-radius:10px;background:#fff;border:1px solid rgba(15,23,42,0.03)">
+              <strong>Trust & Integrity</strong>
+              <div class="muted" style="margin-top:6px">Transparent pricing with no hidden costs.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Commitment to quality -->
+        <section class="card" style="margin-top:18px;">
+          <h3 style="color:black">Commitment to Quality</h3>
+          <p class="muted">We follow strict quality assurance from material checks to erection and dismantling procedures, aligned with industry accreditations and CPD.</p>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="card faq" style="margin-top:18px;">
+          <h3 style="color:black">Frequently Asked Questions (FAQs)</h3>
+
+          <div class="q">
+            <button aria-expanded="false" aria-controls="faq1" onclick="toggleFaq(this)">Q1: What makes you different from other scaffolding consultants in London? <span>+</span></button>
+            <div id="faq1" class="answer" hidden>We combine hands-on practical experience with technical expertise — advice that is both compliant and realistic to apply on site.</div>
+          </div>
+
+          <div class="q">
+            <button aria-expanded="false" aria-controls="faq2" onclick="toggleFaq(this)">Q2: How far do you travel to provide services? <span>+</span></button>
+            <div id="faq2" class="answer" hidden>We mainly serve London and surrounding areas, but we can travel further for larger projects when required.</div>
+          </div>
+
+          <div class="q">
+            <button aria-expanded="false" aria-controls="faq3" onclick="toggleFaq(this)">Q3: Do you offer emergency or last-minute services? <span>+</span></button>
+            <div id="faq3" class="answer" hidden>Yes — we can assist with urgent inspections or consultancy if your project needs immediate support.</div>
+          </div>
+
+          <div class="q">
+            <button aria-expanded="false" aria-controls="faq4" onclick="toggleFaq(this)">Q4: What if I need a service that’s not listed on your website? <span>+</span></button>
+            <div id="faq4" class="answer" hidden>We provide bespoke consultancy. Contact us with your requirements and we’ll discuss how we can help.</div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Right sidebar -->
+      <aside>
+        <div class="contact card" id="contact" aria-labelledby="contact-heading">
+          <h3 id="contact-heading" style="color:black">Get in Touch</h3>
+          <p class="muted">If you need a reliable scaffolding consultant in London, reach out for a quote or site visit.</p>
+
+          <div class="contact-item">
+            <div>
+              <strong>Phone</strong>
+              <div class="muted">+44 (0) 7000 000 000</div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div>
+              <strong>Email</strong>
+              <div class="muted"> aslescaffoldingconsultancy@outlook.com</div>
+            </div>
+          </div>
+
+          <div style="margin-top:8px;">
+            <a href="mailto:aslescaffoldingconsultancy@outlook.com" class="btn" style="display:block;text-align:center">Email Us</a>
+          </div>
+
+          <div style="margin-top:14px;">
+            <a class="anchor-link" href="#services">Services</a><br/>
+            <a class="anchor-link" href="#process">How We Work</a>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h4 style="color:black">On-site Support</h4>
+          <p class="muted">We provide RAMS, toolbox talks, site audits, and point-of-work assessments to keep workers safe and compliant.</p>
+        </div>
+
+        <div class="card" style="margin-top:14px">
+          <h4 style="color:black">Downloadable Report</h4>
+          <p class="muted">Need a sample inspection report? Email us and we'll send a template tailored to your sector.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+  </footer>
+  </script>
+</body>
+</html>
